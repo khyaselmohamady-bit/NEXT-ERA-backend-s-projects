@@ -1,0 +1,8 @@
+package.json :Lists packages and useful commands such as test, typecheck, and build. Think of it as the project’s control panel.
+tsconfig.json: Enables strict TypeScript rules and tells TypeScript where source files are. strict: true catches mistakes before the app runs.
+vitest.config.ts: Configures Vitest to run backend tests in Node.js. This is why the engine tests do not need a browser or database.
+next.config.js: Holds Next.js-wide settings. It is intentionally minimal now.
+health route.ts: Implements GET /api/health. This is the smallest example of a Next.js API route.
+eligibility types.ts : Defines the legal shapes of profiles, requirements, verdicts, checks, and responses. Read this first. It is the vocabulary of the eligibility engine.
+eligibility evaluator.ts : Applies hard rules for nationality, age, education, academic year, GPA, residency, legal authorisation, and deadline. It contains no database, API, or AI code—so the result is deterministic.
+engine tests.ts : Proves the evaluator handles key cases correctly.
